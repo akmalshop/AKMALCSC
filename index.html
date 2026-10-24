@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>AKMAL CSC & PNB CSP • Ultra Luxury Digital Seva Kendra</title>
+
+<!-- Google Premium Typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   💎 1. VISION PRO TITANIUM & OLED LUXURY THEME
+   ========================================================================== */
+:root {
+  --bg-deep: #02050e;
+  --bg-surface: rgba(11, 17, 34, 0.78);
+  --bg-elevated: rgba(18, 26, 48, 0.92);
+  --bg-card: rgba(13, 20, 38, 0.7);
+  
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-glow-cyan: rgba(0, 242, 254, 0.45);
+  --border-glow-gold: rgba(255, 215, 0, 0.45);
+
+  --pnb-maroon: #800000;
+  --pnb-gold: #FFC107;
+  --gold-primary: #FFD700;
+  --gold-champagne: #F5D061;
+  --cyan-neon: #00F2FE;
+  --blue-apple: #0A84FF;
+  --purple-hyper: #A855F7;
+  --green-emerald: #00FF87;
+  --pink-neon: #FF3366;
+  
+  --text-main: #FFFFFF;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+  
+  --ios-blur: blur(36px) saturate(210%);
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --radius-pill: 9999px;
+  --radius-3xl: 32px;
+  --radius-2xl: 26px;
+  --radius-xl: 20px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  
+  --shadow-luxe: 0 25px 65px -15px rgba(0, 0, 0, 0.95), 0 0 35px rgba(0, 242, 254, 0.09);
+  --shadow-gold: 0 20px 50px -10px rgba(255, 215, 0, 0.22);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; font-family: var(--font-main); background-color: var(--bg-deep); color: var(--text-main); }
+body {
+  background: radial-gradient(circle at 50% -10%, #162045 0%, #070c1c 45%, var(--bg-deep) 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Titanium Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--cyan-neon), var(--purple-hyper), var(--gold-primary));
+  border-radius: var(--radius-pill);
+}
+
+#scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px;
+  background: linear-gradient(90deg, var(--cyan-neon), var(--blue-apple), var(--purple-hyper), var(--gold-primary));
+  z-index: 99999; width: 0%; box-shadow: 0 0 16px var(--cyan-neon);
+}
+
+#particle-canvas { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.aurora-orb {
+  position: fixed; border-radius: 50%; filter: blur(140px); pointer-events: none; z-index: 0; opacity: 0.15;
+  animation: orbFloat 24s infinite alternate ease-in-out;
+}
+.orb-1 { width: 620px; height: 620px; background: var(--cyan-neon); top: -150px; left: -100px; }
+.orb-2 { width: 540px; height: 540px; background: var(--purple-hyper); top: 35%; right: -160px; animation-duration: 28s; }
+.orb-3 { width: 480px; height: 480px; background: var(--gold-primary); bottom: 12%; left: 8%; }
+
+@keyframes orbFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(65px, -45px) scale(1.1); }
+  100% { transform: translate(-35px, 35px) scale(0.95); }
+}
+
+.wrap { max-width: 1240px; margin: auto; padding: 0 20px; position: relative; z-index: 2; }
+
+/* Dynamic Island Navbar */
+.navbar {
+  position: sticky; top: 12px; z-index: 1000; margin: 0 auto 16px; max-width: 1140px;
+  background: rgba(10, 15, 30, 0.82); backdrop-filter: var(--ios-blur); -webkit-backdrop-filter: var(--ios-blur);
+  border: 1px solid var(--border-light); border-radius: var(--radius-pill); padding: 10px 24px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.brand-logo {
+  display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-heading);
+  font-size: 19px; font-weight: 900; color: #fff; letter-spacing: -0.02em;
+}
+.brand-logo span.dot {
+  width: 9px; height: 9px; border-radius: 50%; background: var(--gold-primary);
+  box-shadow: 0 0 14px var(--gold-primary);
+}
+.nav-links { display: flex; align-items: center; gap: 18px; }
+.nav-link {
+  color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 600;
+  transition: all 0.25s ease;
+}
+.nav-link:hover { color: #fff; transform: translateY(-1px); }
+
+.status-pill {
+  display: inline-flex; align-items: center; gap: 7px; padding: 6px 14px;
+  background: rgba(0, 255, 135, 0.08); border: 1px solid rgba(0, 255, 135, 0.35);
+  border-radius: var(--radius-pill); font-size: 11.5px; font-weight: 800; color: var(--green-emerald);
+}
+.status-pill.closed { background: rgba(255, 51, 102, 0.08); border-color: rgba(255, 51, 102, 0.35); color: var(--pink-neon); }
+.status-pill.break { background: rgba(255, 215, 0, 0.08); border-color: rgba(255, 215, 0, 0.35); color: var(--gold-primary); }
+.status-dot {
+  width: 7px; height: 7px; background: currentColor; border-radius: 50%;
+  box-shadow: 0 0 10px currentColor; animation: pulseDot 1.6s infinite ease-in-out;
+}
+@keyframes pulseDot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.4; } }
+
+/* Live Sarkari & Banking Marquee Ticker */
+.ticker-wrap {
+  width: 100%; background: rgba(0, 0, 0, 0.6); border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light); padding: 9px 0; overflow: hidden;
+  backdrop-filter: blur(15px); position: relative; z-index: 10; margin-bottom: 22px;
+}
+.ticker-content {
+  display: inline-flex; white-space: nowrap; animation: tickerScroll 40s linear infinite; gap: 42px;
+}
+.ticker-content:hover { animation-play-state: paused; }
+.ticker-item {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 700; color: #E2E8F0;
+}
+.ticker-tag {
+  background: rgba(0, 242, 254, 0.15); color: var(--cyan-neon); font-size: 9.5px; font-weight: 800;
+  padding: 3px 8px; border-radius: var(--radius-pill); border: 1px solid rgba(0, 242, 254, 0.3);
+}
+.ticker-tag.pnb {
+  background: rgba(128, 0, 0, 0.35); color: #FFC107; border-color: rgba(255, 193, 7, 0.5);
+}
+@keyframes tickerScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* Hero Section */
+.hero { padding: 25px 0 45px; text-align: center; position: relative; }
+.profile-showcase { display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; }
+.profile-avatar-wrap { position: relative; width: 130px; height: 130px; margin-bottom: 16px; }
+.profile-avatar-ring {
+  position: absolute; inset: -5px; border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--gold-primary), var(--cyan-neon), var(--purple-hyper), var(--gold-primary));
+  animation: rotateRing 6s linear infinite; filter: blur(3px);
+}
+@keyframes rotateRing { 100% { transform: rotate(360deg); } }
+.profile-avatar-img-box {
+  position: relative; width: 100%; height: 100%; border-radius: 50%; overflow: hidden;
+  border: 3px solid #060810; background: #151824; z-index: 2;
+}
+.profile-avatar-img-box img { width: 100%; height: 100%; object-fit: cover; }
+.owner-name-title {
+  font-family: var(--font-heading); font-size: 28px; font-weight: 900; letter-spacing: -0.02em; color: #fff;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.verified-icon {
+  display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px;
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-champagne)); border-radius: 50%;
+  color: #000; font-size: 12px; font-weight: 900;
+}
+.owner-designation {
+  font-size: 11.5px; font-weight: 800; color: var(--gold-primary); text-transform: uppercase;
+  letter-spacing: 2px; margin-top: 5px;
+}
+.eyebrow-badge {
+  display: inline-flex; align-items: center; gap: 7px; padding: 6px 18px;
+  background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-light); border-radius: var(--radius-pill);
+  color: var(--cyan-neon); font-size: 11px; font-weight: 800; letter-spacing: 1px;
+  margin-bottom: 18px; text-transform: uppercase;
+}
+.hero-title {
+  font-family: var(--font-heading); font-size: clamp(32px, 5.5vw, 62px); font-weight: 900; line-height: 1.15; margin-bottom: 18px;
+  letter-spacing: -0.035em; background: linear-gradient(180deg, #FFFFFF 30%, #94A3B8 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-desc {
+  font-size: 15.5px; line-height: 1.7; color: var(--text-muted); max-width: 780px; margin: 0 auto 30px;
+}
+.hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+  padding: 13px 26px; border-radius: var(--radius-pill); font-weight: 800; font-size: 13px;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; border: none;
+}
+.btn-pnb {
+  background: linear-gradient(135deg, #a80000, #670000); color: #FFE896; border: 1px solid rgba(255, 193, 7, 0.4);
+  box-shadow: 0 10px 30px rgba(128, 0, 0, 0.5);
+}
+.btn-pnb:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(128, 0, 0, 0.7); }
+
+.btn-wa {
+  background: linear-gradient(135deg, #22C55E, #15803D); color: #ffffff;
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+}
+.btn-wa:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(34, 197, 94, 0.55); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--blue-apple), #0056b3); color: #ffffff;
+  box-shadow: 0 10px 30px rgba(10, 132, 255, 0.35);
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(10, 132, 255, 0.55); }
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.05); color: #ffffff;
+  border: 1px solid var(--border-light); backdrop-filter: var(--ios-blur);
+}
+.btn-glass:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-3px); }
+
+/* Live Stats */
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 44px auto 0; max-width: 1100px; }
+.stat-card {
+  background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg);
+  padding: 22px 16px; text-align: center; backdrop-filter: var(--ios-blur); transition: all 0.3s ease;
+}
+.stat-card:hover { background: var(--bg-elevated); transform: translateY(-4px); border-color: var(--cyan-neon); }
+.stat-num { font-family: var(--font-heading); font-size: 32px; font-weight: 900; color: #fff; margin-bottom: 2px; }
+.stat-lbl { font-size: 10.5px; color: var(--text-muted); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+
+/* ==========================================================================
+   🏛️ SPECIAL PUNJAB NATIONAL BANK (PNB) KIOSK CSP BANNER
+   ========================================================================== */
+.pnb-highlight-section { padding: 35px 0 15px; }
+.pnb-hero-card {
+  background: linear-gradient(135deg, rgba(80, 0, 0, 0.75) 0%, rgba(20, 5, 12, 0.95) 100%);
+  border: 1px solid rgba(255, 193, 7, 0.45); border-radius: var(--radius-3xl);
+  padding: 34px 30px; box-shadow: 0 20px 60px rgba(128, 0, 0, 0.35);
+  display: grid; grid-template-columns: 1.15fr 1fr; gap: 30px; align-items: center;
+  backdrop-filter: var(--ios-blur);
+}
+.pnb-tag-row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.pnb-pill {
+  background: #FFC107; color: #000; font-size: 11px; font-weight: 900;
+  padding: 4px 12px; border-radius: var(--radius-pill); letter-spacing: 0.5px;
+}
+.pnb-hero-card h2 {
+  font-family: var(--font-heading); font-size: 28px; font-weight: 900; color: #fff; line-height: 1.25; margin-bottom: 10px;
+}
+.pnb-hero-card p { font-size: 13px; color: #E2E8F0; line-height: 1.6; margin-bottom: 18px; }
+.pnb-bullet-list { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 12.5px; color: #FDE68A; }
+.pnb-bullet-list li { display: flex; align-items: center; gap: 8px; }
+
+.pnb-passbook-visual {
+  background: #730000; border: 2px solid #FFC107; border-radius: 18px; padding: 22px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.8); display: flex; flex-direction: column; gap: 14px;
+}
+.pnb-pb-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(255,255,255,0.2); padding-bottom: 10px; }
+.pnb-pb-header h4 { font-size: 14px; font-weight: 900; color: #FFC107; letter-spacing: 1px; }
+.pnb-pb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 11.5px; color: #fff; }
+.pnb-pb-grid div span { color: #FCD34D; font-size: 10px; display: block; text-transform: uppercase; }
+
+/* 3D Smart PVC Card Showcase */
+.pvc-showcase-section { padding: 35px 0 20px; }
+.pvc-container-card {
+  background: linear-gradient(135deg, rgba(16, 24, 48, 0.85), rgba(7, 10, 20, 0.95));
+  border: 1px solid var(--border-glow-gold); border-radius: var(--radius-3xl);
+  padding: 38px; box-shadow: var(--shadow-gold); display: grid; grid-template-columns: 1fr 1fr;
+  gap: 34px; align-items: center; backdrop-filter: var(--ios-blur);
+}
+.pvc-info h2 { font-family: var(--font-heading); font-size: 28px; font-weight: 900; color: #fff; line-height: 1.25; margin-bottom: 10px; }
+.pvc-info p { color: var(--text-muted); font-size: 13px; line-height: 1.6; margin-bottom: 18px; }
+.pvc-features-list { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 12.5px; color: #E2E8F0; }
+.pvc-features-list li { display: flex; align-items: center; gap: 9px; }
+.pvc-features-list li span { color: var(--green-emerald); font-weight: 900; }
+
+.pvc-card-visual {
+  width: 100%; max-width: 350px; height: 210px; margin: auto;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border: 2px solid var(--gold-primary); border-radius: 16px;
+  padding: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.9), 0 0 25px rgba(255, 215, 0, 0.25);
+  display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;
+  animation: floatCard 6s ease-in-out infinite;
+}
+@keyframes floatCard { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+.pvc-card-chip {
+  width: 42px; height: 32px; background: linear-gradient(135deg, #f5d061, #e6b800);
+  border-radius: 6px; border: 1px solid #b38600;
+}
+.pvc-card-hologram {
+  position: absolute; right: 18px; top: 18px; width: 44px; height: 44px; border-radius: 50%;
+  background: conic-gradient(from 180deg, var(--cyan-neon), var(--purple-hyper), var(--gold-primary), var(--cyan-neon));
+  opacity: 0.85; filter: blur(1px); border: 2px solid rgba(255,255,255,0.4);
+}
+.pvc-card-number { font-family: var(--font-mono); font-size: 15px; letter-spacing: 3px; color: #fff; font-weight: 700; margin-top: 10px; }
+.pvc-card-holder { display: flex; justify-content: space-between; align-items: flex-end; }
+.pvc-card-holder div h6 { font-size: 8.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+.pvc-card-holder div p { font-size: 12.5px; font-weight: 800; color: #fff; }
+
+/* 3-Step Seamless WhatsApp Flow */
+.flow-section { padding: 35px 0 20px; }
+.section-title-wrap { text-align: center; margin-bottom: 30px; }
+.section-title-wrap h2 { font-family: var(--font-heading); font-size: 28px; font-weight: 900; letter-spacing: -0.03em; color: #fff; }
+.section-title-wrap p { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+
+.flow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.flow-card {
+  background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-xl);
+  padding: 26px 20px; position: relative; overflow: hidden; backdrop-filter: var(--ios-blur); transition: all 0.3s;
+}
+.flow-card:hover { border-color: var(--cyan-neon); transform: translateY(-4px); }
+.flow-badge {
+  font-size: 10px; font-weight: 800; color: var(--cyan-neon); text-transform: uppercase;
+  letter-spacing: 1px; margin-bottom: 10px; display: inline-block;
+}
+.flow-card h3 { font-size: 16.5px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+.flow-card p { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+
+/* ==========================================================================
+   🧰 MASTER SERVICES SHOWCASE (BUG-FREE SCROLL • ZERO PRICES)
+   ========================================================================== */
+.services-section { padding: 35px 0; }
+.section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 22px; gap: 16px; flex-wrap: wrap; }
+.section-header h2 { font-family: var(--font-heading); font-size: 28px; font-weight: 900; letter-spacing: -0.03em; color: #fff; }
+.section-header p { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+
+.search-input-wrap { width: 340px; max-width: 100%; position: relative; }
+.search-input-wrap input {
+  width: 100%; padding: 12px 18px 12px 42px; background: var(--bg-surface);
+  border: 1px solid var(--border-light); border-radius: var(--radius-pill); color: #fff;
+  font-size: 13px; outline: none; transition: 0.3s; backdrop-filter: var(--ios-blur);
+}
+.search-input-wrap input:focus { border-color: var(--cyan-neon); box-shadow: 0 0 20px rgba(0, 242, 254, 0.35); }
+.search-input-wrap svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; fill: var(--text-muted); }
+
+.categories-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.cat-chip {
+  padding: 8px 16px; border-radius: var(--radius-pill); background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-light); color: var(--text-muted); font-size: 11.5px;
+  font-weight: 700; cursor: pointer; transition: 0.25s;
+}
+.cat-chip.active, .cat-chip:hover {
+  background: var(--blue-apple); border-color: var(--blue-apple); color: #fff;
+  box-shadow: 0 4px 18px rgba(10, 132, 255, 0.4);
+}
+.cat-chip.pnb-chip.active {
+  background: #990000; border-color: #FFC107; color: #FFC107;
+  box-shadow: 0 4px 18px rgba(153, 0, 0, 0.5);
+}
+
+/* Service Grid - 100% VISIBLE (No opacity bug) */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; min-height: 200px; }
+.service-card {
+  background: var(--bg-card); border: 1px solid var(--border-light);
+  border-radius: var(--radius-2xl); padding: 22px; position: relative; overflow: hidden;
+  backdrop-filter: var(--ios-blur); display: flex; flex-direction: column; justify-content: space-between;
+  opacity: 1 !important; transform: none !important; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+  border-color: var(--cyan-neon); transform: translateY(-5px) !important;
+  background: var(--bg-elevated); box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 242, 254, 0.15);
+}
+.service-card.pnb-bank-card {
+  border-color: rgba(255, 193, 7, 0.3); background: rgba(30, 8, 15, 0.65);
+}
+.service-card.pnb-bank-card:hover {
+  border-color: #FFC107; box-shadow: 0 15px 40px rgba(128, 0, 0, 0.4);
+}
+
+.card-header-bar { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.service-logo-wrap {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(0, 242, 254, 0.1));
+  border: 1px solid rgba(0, 242, 254, 0.3); display: grid; place-items: center; font-size: 24px;
+}
+.pnb-bank-card .service-logo-wrap {
+  background: linear-gradient(135deg, rgba(128,0,0,0.5), rgba(255,193,7,0.15));
+  border-color: rgba(255, 193, 7, 0.4);
+}
+.service-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.badge-category {
+  font-size: 9px; font-weight: 800; padding: 3px 8px; border-radius: var(--radius-pill);
+  background: rgba(0, 242, 254, 0.1); color: var(--cyan-neon); border: 1px solid rgba(0, 242, 254, 0.25);
+}
+.badge-verified {
+  font-size: 9.5px; font-weight: 800; color: var(--gold-primary);
+  background: rgba(255, 215, 0, 0.12); padding: 3px 8px; border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 215, 0, 0.35); text-transform: uppercase;
+}
+.service-card h3 { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 5px; }
+.service-card p.service-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; margin-bottom: 14px; }
+
+.service-meta-box {
+  background: rgba(0, 0, 0, 0.45); border: 1px solid var(--border-light);
+  border-radius: var(--radius-md); padding: 11px; margin-bottom: 14px;
+  display: flex; flex-direction: column; gap: 6px; font-size: 11.5px;
+}
+.meta-row { display: flex; align-items: flex-start; gap: 6px; }
+.meta-label { color: var(--gold-primary); font-weight: 800; min-width: 68px; font-size: 10px; text-transform: uppercase; }
+.meta-val { color: #E2E8F0; line-height: 1.4; font-size: 11.5px; }
+
+.service-card-footer {
+  display: flex; gap: 8px; align-items: center; padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.btn-card-inquire {
+  flex: 1; padding: 10px 14px; background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #22C55E; font-size: 12px; font-weight: 800; border-radius: var(--radius-sm);
+  text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  transition: all 0.25s ease;
+}
+.btn-card-inquire:hover { background: #22C55E; color: #000; box-shadow: 0 0 16px rgba(34, 197, 94, 0.4); }
+
+/* Portals Grid */
+.portals-section { padding: 35px 0; }
+.portals-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 18px; }
+.portal-card {
+  background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg);
+  padding: 16px 10px; text-align: center; backdrop-filter: var(--ios-blur); transition: 0.3s;
+}
+.portal-card:hover { border-color: var(--cyan-neon); transform: translateY(-4px); }
+.portal-icon { font-size: 26px; margin-bottom: 6px; }
+.portal-card h5 { font-size: 12px; font-weight: 800; color: #fff; margin-bottom: 2px; }
+.portal-card span { font-size: 9.5px; color: var(--text-muted); }
+
+/* Lounge Hardware */
+.tech-section { padding: 35px 0; }
+.tech-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px; }
+.tech-card {
+  background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-xl);
+  padding: 20px; text-align: center; backdrop-filter: var(--ios-blur); transition: 0.3s;
+}
+.tech-card:hover { border-color: var(--cyan-neon); transform: translateY(-4px); }
+.tech-icon { font-size: 30px; margin-bottom: 8px; display: inline-block; }
+.tech-card h4 { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.tech-card p { font-size: 11.5px; color: var(--text-muted); line-height: 1.5; }
+
+/* Reviews */
+.reviews-section { padding: 35px 0; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+.review-card {
+  background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-xl);
+  padding: 20px; backdrop-filter: var(--ios-blur);
+}
+.review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.review-stars { color: var(--gold-primary); font-size: 13px; }
+.review-author { font-size: 13px; font-weight: 800; color: #fff; }
+.review-loc { font-size: 10px; color: var(--text-muted); }
+.review-text { font-size: 12px; color: #CBD5E1; line-height: 1.6; }
+
+/* FAQ Accordion */
+.faq-section { padding: 35px 0; }
+.faq-wrap { max-width: 860px; margin: 20px auto 0; display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md);
+  overflow: hidden; backdrop-filter: var(--ios-blur); transition: 0.3s;
+}
+.faq-item.active { border-color: var(--cyan-neon); }
+.faq-question {
+  padding: 15px 18px; display: flex; justify-content: space-between; align-items: center;
+  font-weight: 700; font-size: 13px; cursor: pointer; color: #fff;
+}
+.faq-question span { font-size: 16px; transition: transform 0.3s; color: var(--cyan-neon); }
+.faq-item.active .faq-question span { transform: rotate(45deg); }
+.faq-answer {
+  max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease;
+  font-size: 12px; color: var(--text-muted); line-height: 1.65; padding: 0 18px;
+}
+.faq-item.active .faq-answer { max-height: 160px; padding-bottom: 15px; }
+
+/* ==========================================================================
+   📍 ULTRA-LUXURY BOTTOM LOCATION & MASTER GOOGLE MAP SECTION
+   ========================================================================== */
+.bottom-location-section { padding: 45px 0 70px; position: relative; z-index: 2; }
+.mega-address-card {
+  background: radial-gradient(circle at 10% 20%, rgba(20, 30, 58, 0.88) 0%, rgba(10, 15, 28, 0.98) 100%);
+  border: 1px solid var(--border-glow-cyan); border-radius: var(--radius-3xl);
+  padding: 34px; box-shadow: var(--shadow-luxe); display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 30px; align-items: center; backdrop-filter: var(--ios-blur);
+}
+.address-info-box { display: flex; flex-direction: column; gap: 16px; }
+
+.address-hero-badge {
+  display: inline-flex; align-items: center; gap: 7px; font-size: 10.5px; font-weight: 800;
+  color: var(--gold-primary); text-transform: uppercase; letter-spacing: 2px;
+}
+.address-title { font-family: var(--font-heading); font-size: 26px; font-weight: 900; color: #fff; line-height: 1.2; }
+.address-title span { color: var(--cyan-neon); }
+
+.detail-block {
+  background: rgba(0, 0, 0, 0.5); border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg); padding: 15px 18px; display: flex; gap: 12px;
+}
+.detail-icon {
+  width: 42px; height: 42px; border-radius: 10px; background: rgba(0, 242, 254, 0.1);
+  border: 1px solid rgba(0, 242, 254, 0.3); display: grid; place-items: center; font-size: 18px; flex-shrink: 0;
+}
+.detail-content h4 { font-size: 13.5px; font-weight: 800; color: #fff; margin-bottom: 3px; }
+.detail-content p { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+
+.timings-mini-table { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 5px; }
+.timings-mini-table td { padding: 4px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.07); }
+.timings-mini-table td:last-child { text-align: right; font-weight: 700; color: var(--cyan-neon); }
+.timings-mini-table tr:last-child td { border-bottom: none; }
+
+.action-buttons-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+.action-btn-maps {
+  flex: 1; padding: 12px 18px; background: linear-gradient(135deg, var(--blue-apple), #0056b3);
+  color: #fff; border-radius: var(--radius-pill); font-size: 12.5px; font-weight: 800;
+  text-decoration: none; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  box-shadow: 0 10px 25px rgba(10, 132, 255, 0.4); transition: 0.3s;
+}
+.action-btn-call {
+  flex: 1; padding: 12px 18px; background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-light); color: #fff; border-radius: var(--radius-pill);
+  font-size: 12.5px; font-weight: 800; text-decoration: none; text-align: center;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; transition: 0.3s;
+}
+
+/* Map Frame */
+.map-visual-container {
+  width: 100%; height: 100%; min-height: 360px; position: relative;
+  border-radius: var(--radius-2xl); overflow: hidden; border: 1px solid var(--border-glow-cyan);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+}
+.map-visual-container iframe { width: 100%; height: 100%; min-height: 360px; border: none; display: block; }
+.map-live-tag {
+  position: absolute; top: 12px; left: 12px; background: rgba(8, 12, 22, 0.9);
+  border: 1px solid var(--green-emerald); border-radius: var(--radius-pill); padding: 4px 12px;
+  font-size: 10.5px; font-weight: 800; color: var(--green-emerald); backdrop-filter: blur(10px);
+  display: flex; align-items: center; gap: 6px;
+}
+.map-live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-emerald); animation: pulseDot 1.4s infinite; }
+
+/* Floating Action Buttons */
+.fab-container {
+  position: fixed; bottom: 20px; right: 20px; z-index: 990;
+  display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+}
+.fab-btn {
+  padding: 12px 18px; border-radius: var(--radius-pill); font-weight: 800; font-size: 12px;
+  display: flex; align-items: center; gap: 6px; text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.8); backdrop-filter: var(--ios-blur); transition: all 0.3s;
+}
+.fab-wa { background: #22C55E; color: #fff; }
+.fab-call { background: var(--blue-apple); color: #fff; }
+
+/* ==========================================================================
+   🛡️ MASTER ADMIN PANEL & AUTH MODAL STYLING
+   ========================================================================== */
+.admin-trigger-tag {
+  display: inline-flex; align-items: center; gap: 6px; padding: 7px 16px;
+  background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(0, 242, 254, 0.3);
+  border-radius: var(--radius-pill); color: var(--cyan-neon); font-size: 11px; font-weight: 800;
+  cursor: pointer; text-decoration: none; margin-top: 15px; transition: 0.3s;
+}
+.admin-trigger-tag:hover { background: var(--cyan-neon); color: #000; box-shadow: 0 0 15px var(--cyan-neon); }
+
+.admin-modal-overlay {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(40px);
+  z-index: 999999; display: flex; align-items: center; justify-content: center; padding: 20px;
+  opacity: 0; pointer-events: none; transition: 0.3s ease;
+}
+.admin-modal-overlay.active { opacity: 1; pointer-events: auto; }
+
+.admin-auth-card {
+  background: #080d1e; border: 1px solid var(--cyan-neon); border-radius: var(--radius-2xl);
+  box-shadow: 0 0 50px rgba(0, 242, 254, 0.25); max-width: 380px; width: 100%; padding: 28px;
+  text-align: center; position: relative;
+}
+.admin-panel-card {
+  background: #060914; border: 1px solid var(--cyan-neon); border-radius: var(--radius-2xl);
+  box-shadow: 0 0 60px rgba(0, 242, 254, 0.28); max-width: 980px; width: 100%; max-height: 90vh;
+  display: flex; flex-direction: column; overflow: hidden; position: relative;
+}
+.admin-header {
+  padding: 16px 20px; border-bottom: 1px solid var(--border-light);
+  display: flex; justify-content: space-between; align-items: center; background: rgba(14, 18, 30, 0.9);
+}
+.admin-tabs {
+  display: flex; gap: 6px; padding: 10px 20px; border-bottom: 1px solid var(--border-light);
+  background: rgba(0,0,0,0.5); overflow-x: auto;
+}
+.admin-tab-btn {
+  padding: 8px 14px; border-radius: var(--radius-sm); background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-light); color: var(--text-muted); font-size: 11.5px; font-weight: 800;
+  cursor: pointer; transition: 0.2s; white-space: nowrap;
+}
+.admin-tab-btn.active {
+  background: var(--cyan-neon); color: #000; border-color: var(--cyan-neon);
+}
+.admin-body { padding: 20px; overflow-y: auto; flex: 1; }
+.admin-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.admin-field-box {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border-light); border-radius: var(--radius-md);
+  padding: 12px; display: flex; flex-direction: column; gap: 5px;
+}
+.admin-field-box label { font-size: 10.5px; font-weight: 800; color: var(--cyan-neon); text-transform: uppercase; }
+.admin-field-box input, .admin-field-box select, .admin-field-box textarea {
+  padding: 9px 12px; background: rgba(0,0,0,0.6); border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm); color: #fff; font-size: 12.5px; outline: none; font-family: inherit;
+}
+.admin-service-row {
+  background: rgba(0,0,0,0.5); border: 1px solid var(--border-light); border-radius: var(--radius-md);
+  padding: 10px 14px; margin-bottom: 8px; display: grid; grid-template-columns: 35px 1.5fr 1fr 1fr 80px;
+  align-items: center; gap: 10px; font-size: 12px;
+}
+.close-modal-btn {
+  background: rgba(255,255,255,0.08); border: none; color: #fff; width: 28px; height: 28px;
+  border-radius: 50%; cursor: pointer; display: grid; place-items: center; font-size: 13px;
+}
+
+/* Toast */
+#toast-container {
+  position: fixed; top: 20px; right: 20px; z-index: 1000000; display: flex; flex-direction: column; gap: 8px;
+}
+.ios-toast {
+  background: rgba(18, 20, 30, 0.95); border: 1px solid var(--cyan-neon);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.85); backdrop-filter: blur(25px);
+  padding: 12px 18px; border-radius: var(--radius-pill); color: #fff; font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; gap: 8px; animation: slideToast 0.3s ease;
+}
+@keyframes slideToast { from { opacity: 0; transform: translateY(-15px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border-light); padding: 40px 0 25px; text-align: center;
+  color: var(--text-muted); font-size: 12px; background: #020408; position: relative; z-index: 2;
+}
+
+/* Responsive adjustments */
+@media(max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .mega-address-card { grid-template-columns: 1fr; }
+  .pnb-hero-card { grid-template-columns: 1fr; }
+  .pvc-container-card { grid-template-columns: 1fr; }
+  .portals-grid { grid-template-columns: repeat(3, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: none; }
+  .admin-service-row { grid-template-columns: 1fr; gap: 6px; }
+  .admin-grid-2 { grid-template-columns: 1fr; }
+}
+@media(max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .flow-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 32px; }
+  .mega-address-card { padding: 20px; }
+  .pvc-container-card { padding: 20px; }
+  .pnb-hero-card { padding: 20px; }
+  .portals-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+<canvas id="particle-canvas"></canvas>
+<div id="toast-container"></div>
+
+<div class="aurora-orb orb-1"></div>
+<div class="aurora-orb orb-2"></div>
+<div class="aurora-orb orb-3"></div>
+
+<!-- ==========================================================================
+     💎 DYNAMIC ISLAND NAVBAR
+     ========================================================================== -->
+<header class="navbar">
+  <div class="nav-container">
+    <a href="#" class="brand-logo">
+      <span>AKMAL CSC</span>
+      <span class="dot"></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#pnb" class="nav-link" style="color:var(--gold-primary);">🏛️ PNB CSP Banking</a>
+      <a href="#pvc" class="nav-link">Smart PVC Card</a>
+      <a href="#services" class="nav-link">All Services</a>
+      <a href="#tech" class="nav-link">Lounge Tech</a>
+      <a href="#reviews" class="nav-link">Customer Trust</a>
+      <a href="#location" class="nav-link" style="color:var(--cyan-neon);">📍 Dukan Ka Pata</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="status-pill" id="liveStatusPill">
+        <span class="status-dot"></span>
+        <span id="liveStatusText">OPEN NOW</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Live Sarkari & PNB Banking Marquee Ticker -->
+<div class="ticker-wrap">
+  <div class="ticker-content" id="liveTickerContent">
+    <div class="ticker-item"><span class="ticker-tag pnb">PNB CSP</span> 🏛️ Punjab National Bank naye zero-balance khate aur passbook printing live shuru hai.</div>
+    <div class="ticker-item"><span class="ticker-tag">AEPS BANKING</span> 💳 Kisi bhi bank ke khate se angutha lagakar turant paise nikalein aur balance check karein.</div>
+    <div class="ticker-item"><span class="ticker-tag">NEW UPDATE</span> ⚡ Ayushman Bharat 5 Lakh Muft Ilaj Card e-KYC shuru hai.</div>
+    <div class="ticker-item"><span class="ticker-tag">PVC CARD</span> 🪪 ATM jaisa waterproof Smart PVC Plastic Aadhaar & PAN Card sirf 5 minute me.</div>
+    <div class="ticker-item"><span class="ticker-tag">EPFO</span> 💼 PF Advance & Full Claim Withdrawal settlement online aavedan uplabdh.</div>
+  </div>
+</div>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero wrap">
+    <div class="profile-showcase">
+      <div class="profile-avatar-wrap">
+        <div class="profile-avatar-ring"></div>
+        <div class="profile-avatar-img-box">
+          <img id="ownerPhoto" src="https://i.ibb.co/Z6RbdyDs/file-00000000b9b0821199ec90330ebd2625.png" alt="AKMAL CSC Owner">
+        </div>
+      </div>
+
+      <h2 class="owner-name-title" id="ownerNameDisplay">
+        AKMAL CSC <span class="verified-icon" title="Certified VLE">✓</span>
+      </h2>
+      <div class="owner-designation" id="ownerDesigDisplay">Authorized Digital Seva Kendra & Punjab National Bank CSP</div>
+    </div>
+
+    <div>
+      <div class="eyebrow-badge">⚡ Official Digital India & PNB Kiosk Banking Hub</div>
+    </div>
+    
+    <h1 class="hero-title">Punjab National Bank Banking<br>Aur Sabhi Digital Sarkari Sevaen.</h1>
+    <p class="hero-desc" id="heroDescText">PNB Khata kholna, Aadhaar AEPS Cash Nikasi, Passbook Printing, NSDL PAN Card, Ayushman Card, Ration Card aur ATM jaise Premium PVC Smart Cards. Har kaam 100% surakshit aur bina kisi lambe form ke.</p>
+    
+    <div class="hero-cta">
+      <a class="btn btn-pnb" href="#pnb">
+        🏛️ PNB CSP Banking Sevaen
+      </a>
+      <a class="btn btn-wa" id="mainWaBtn" href="https://wa.me/917479470293?text=Namaste%20Akmal%20Bhai,%20mujhe%20online%20service%20ke%20bare%20me%20jankari%20chahiye." target="_blank">
+        💬 Direct WhatsApp Par Baat Karein
+      </a>
+      <a class="btn btn-primary" href="#services">
+        🧰 All 40+ Master Services
+      </a>
+    </div>
+
+    <!-- Live Statistics Counters -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num" data-target="15000">15000+</div>
+        <div class="stat-lbl">Khush Grahak (Happy Users)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="statServicesNum">40+</div>
+        <div class="stat-lbl">Master Sevaen (Services)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-lbl">Sahi & Surakshit Kaam</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">5 Min</div>
+        <div class="stat-lbl">Avg Response Time</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       🏛️ SPECIAL PUNJAB NATIONAL BANK (PNB) CSP KIOSK SHOWCASE
+       ========================================================================== -->
+  <section class="pnb-highlight-section wrap" id="pnb">
+    <div class="pnb-hero-card">
+      <div>
+        <div class="pnb-tag-row">
+          <span class="pnb-pill">OFFICIAL PNB CSP</span>
+          <span style="font-size:11px; font-weight:800; color:#FFC107;">Punjab National Bank Kiosk Banking</span>
+        </div>
+        <h2>Bank Jane Ki Zaroorat Nahi, Yahan Hoga Sabhi Kaam</h2>
+        <p>Hamare Kendra par Punjab National Bank (PNB) ka authorized Business Correspondent (BC) Point uplabdh hai. Ab lambi line se bachein aur sabhi banking suvidhayein turant prapt karein.</p>
+        
+        <ul class="pnb-bullet-list">
+          <li><span>✓</span> Naya Zero-Balance Savings & Jan-Dhan Khata Kholna</li>
+          <li><span>✓</span> Aadhaar Number & Anguthe Se Cash Withdrawal & Deposit</li>
+          <li><span>✓</span> Original PNB Physical Passbook Printing Live</li>
+          <li><span>✓</span> PMJJBY, PMSBY Bima & Atal Pension Yojana (APY) Registration</li>
+          <li><span>✓</span> Micro-ATM Se Kisi Bhi Bank Ke ATM Card Se Cash Nikasi</li>
+        </ul>
+
+        <div style="margin-top:20px;">
+          <a class="btn btn-pnb" href="https://wa.me/917479470293?text=Namaste%20Akmal%20Bhai,%20mujhe%20PNB%20Banking%20service%20ke%20bare%20me%20jankari%20chahiye." target="_blank">
+            🏛️ PNB Banking Ke Liye WhatsApp Karein
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="pnb-passbook-visual">
+          <div class="pnb-pb-header">
+            <h4>PUNJAB NATIONAL BANK</h4>
+            <span style="font-size:10px; background:#FFC107; color:#000; padding:2px 8px; border-radius:4px; font-weight:900;">KIOSK CSP</span>
+          </div>
+          <div class="pnb-pb-grid">
+            <div>
+              <span>Bank Name</span>
+              <b>Punjab National Bank</b>
+            </div>
+            <div>
+              <span>Channel</span>
+              <b>Authorized BC Point</b>
+            </div>
+            <div>
+              <span>Account Type</span>
+              <b>Savings / PMJDY</b>
+            </div>
+            <div>
+              <span>Cash Limits</span>
+              <b>Instant Real-time</b>
+            </div>
+          </div>
+          <div style="border-top:1px dashed rgba(255,255,255,0.2); padding-top:8px; font-size:11px; color:#FDE68A;">
+            ⚡ <b>All Banks Supported:</b> SBI, PNB, BoB, Union Bank sabhi ka AEPS cash withdrawal uplabdh hai.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D Smart PVC Card Live Showcase -->
+  <section class="pvc-showcase-section wrap" id="pvc">
+    <div class="pvc-container-card">
+      <div class="pvc-info">
+        <div class="eyebrow-badge" style="color:var(--gold-primary); border-color:var(--border-glow-gold);">🪪 Ultra-HD Plastic Printing</div>
+        <h2>Atm Jaisa Solid Waterproof PVC Smart Card Banwayein</h2>
+        <p>Aadhaar Card, PAN Card, Ayushman Golden Card, Voter ID ya Driving Licence ko jeb me surakshit rakhne ke liye original high-density PVC plastic card par print karwayein.</p>
+        <ul class="pvc-features-list">
+          <li><span>✓</span> 100% Waterproof, Dustproof & Non-Tearable</li>
+          <li><span>✓</span> High-Resolution 600 DPI Thermal Color Print</li>
+          <li><span>✓</span> ATM / Credit Card Jaisi Thickness aur Chamak</li>
+          <li><span>✓</span> Cafe Par Sirf 5 Minute Me Instant Ready</li>
+        </ul>
+        <div style="margin-top: 22px;">
+          <a class="btn btn-wa" href="https://wa.me/917479470293?text=Namaste%20Akmal%20Bhai,%20mujhe%20apna%20Smart%20PVC%20Card%20print%20karwana%20hai." target="_blank">
+            🪪 PVC Card Print Karwayein
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="pvc-card-visual">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="pvc-card-chip"></div>
+            <div style="font-size:10px; font-weight:800; color:var(--gold-primary); letter-spacing:1px;">OFFICIAL SMART CARD</div>
+          </div>
+          <div class="pvc-card-hologram"></div>
+          <div>
+            <div style="font-size:11px; color:#94A3B8;">GOVERNMENT OF INDIA</div>
+            <div class="pvc-card-number">XXXX XXXX 7860</div>
+          </div>
+          <div class="pvc-card-holder">
+            <div>
+              <h6>Card Holder</h6>
+              <p>MOHAMMAD DANISH</p>
+            </div>
+            <div style="text-align:right;">
+              <h6>Quality</h6>
+              <p style="color:var(--green-emerald);">ULTRA HD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Step WhatsApp Flow -->
+  <section id="flow" class="flow-section wrap">
+    <div class="section-title-wrap">
+      <div class="eyebrow-badge">⚡ Zero Hassle • No Form Filling</div>
+      <h2>Ghar Baithe Ya Cafe Par Kaam Kaise Hoga?</h2>
+      <p>Aapko lambe-chaude form bharne ki bilkul zaroorat nahi hai. Seedha 3 aasan kadamo mein kaam karein.</p>
+    </div>
+
+    <div class="flow-grid">
+      <div class="flow-card">
+        <span class="flow-badge">Step 01</span>
+        <div style="font-size:30px; margin-bottom:10px;">📱</div>
+        <h3>Service & Documents Chunein</h3>
+        <p>Neeche catalog me apni service dekhein aur likhe hue documents WhatsApp par photo kheench kar ya PDF share karein.</p>
+      </div>
+
+      <div class="flow-card">
+        <span class="flow-badge">Step 02</span>
+        <div style="font-size:30px; margin-bottom:10px;">⚡</div>
+        <h3>Instant Official Verification</h3>
+        <p>Akmal CSC center par aapka document verify hota hai, online portal me login karke turant slip taiyar ki jaati hai.</p>
+      </div>
+
+      <div class="flow-card">
+        <span class="flow-badge">Step 03</span>
+        <div style="font-size:30px; margin-bottom:10px;">🪪</div>
+        <h3>Original PDF Ya PVC Receive Karein</h3>
+        <p>Aapka certificate/form WhatsApp par turant mil jayega ya dukan par aakar Ultra-HD Smart PVC Card collect karein.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Services Showcase (BUG-FREE SCROLL • 100% VISIBLE) -->
+  <section id="services" class="services-section wrap">
+    <div class="section-header">
+      <div>
+        <h2>🧰 Master Services Directory</h2>
+        <p>Har service ka logo, required documents aur official processing samjhein (Sabhi services hamesha dikhengi).</p>
+      </div>
+      <div class="search-input-wrap">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 14z"/></svg>
+        <input id="search" placeholder="Search (PNB, Aadhaar, PAN, PF, Ayushman, PVC)...">
+      </div>
+    </div>
+
+    <div class="categories-bar" id="cats"></div>
+    <div id="servicesContainer" class="services-grid"></div>
+  </section>
+
+  <!-- Portals Directory -->
+  <section class="portals-section wrap">
+    <div class="section-title-wrap">
+      <div class="eyebrow-badge">🏛️ Direct Portal Integrations</div>
+      <h2>Authorized Central & State Government Portals</h2>
+      <p>Hamare Kendra par sabhi official sarkari portals ka direct aur surakshit access uplabdh hai.</p>
+    </div>
+
+    <div class="portals-grid">
+      <div class="portal-card">
+        <div class="portal-icon">🏛️</div>
+        <h5>PNB Kiosk</h5>
+        <span>Banking Portal</span>
+      </div>
+      <div class="portal-card">
+        <div class="portal-icon">🆔</div>
+        <h5>UIDAI Aadhaar</h5>
+        <span>Aadhaar Seva</span>
+      </div>
+      <div class="portal-card">
+        <div class="portal-icon">🧾</div>
+        <h5>NSDL / Protean</h5>
+        <span>PAN Services</span>
+      </div>
+      <div class="portal-card">
+        <div class="portal-icon">🚗</div>
+        <h5>Parivahan Sewa</h5>
+        <span>DL & RC Portal</span>
+      </div>
+      <div class="portal-card">
+        <div class="portal-icon">💼</div>
+        <h5>EPFO India</h5>
+        <span>PF & Pension</span>
+      </div>
+      <div class="portal-card">
+        <div class="portal-icon">🏥</div>
+        <h5>NHA Setu</h5>
+        <span>Ayushman Card</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lounge Hardware -->
+  <section id="tech" class="tech-section wrap">
+    <div class="section-title-wrap">
+      <div class="eyebrow-badge">🖨️ Ultra-Speed Infrastructure</div>
+      <h2>High-Tech Printing & Cyber Equipment</h2>
+      <p>Hamare lounge par high-grade machines uplabdh hain jisse aapka kaam sabse behtar quality me hota hai.</p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-icon">🪪</div>
+        <h4>Thermal PVC Card Printer</h4>
+        <p>ATM jaisi thick quality wala waterproof aur scratch-proof Smart PVC Card print hota hai.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">📸</div>
+        <h4>6-Color Photo Studio</h4>
+        <p>Passport size photo sirf 5 minute me HD matte aur glossy sheet par turant print.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">👆</div>
+        <h4>RD Certified Biometric</h4>
+        <p>Mantra & Morpho high-accuracy biometric scanner jisse PNB AEPS aur Aadhaar e-KYC fast ho sake.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">📑</div>
+        <h4>High-Speed Laser Duplex</h4>
+        <p>Badi PDF books, exam admit card aur legal documents ki crystal clear fast printing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Trust Reviews -->
+  <section class="reviews-section wrap" id="reviews">
+    <div class="section-title-wrap">
+      <div class="eyebrow-badge">⭐ Customer Feedback</div>
+      <h2>Grahakon Ka Bharosa (Rating: 4.9/5)</h2>
+      <p>Local nagrikon aur regular visitors ka vishwas aur feedback.</p>
+    </div>
+
+    <div class="reviews-grid" id="publicReviewsContainer"></div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="faq-section wrap" id="faq">
+    <div class="section-title-wrap">
+      <div class="eyebrow-badge">❓ FAQ</div>
+      <h2>Aksar Pooche Jane Wale Sawal</h2>
+    </div>
+
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-question">Punjab National Bank ka khata kholne ke liye kya chahiye? <span>+</span></div>
+        <div class="faq-answer">PNB Kiosk CSP par naya savings ya Jan-Dhan khata kholne ke liye aapka Aadhaar Card, PAN card (ya Form 60), 2 passport size photo aur mobile number zaroori hai. Khata turant activate ho jata hai.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Kya dusre banks ka paisa bhi anguthe se nikal sakte hain? <span>+</span></div>
+        <div class="faq-answer">Haan! Hamare PNB CSP Center par AEPS ke dwara State Bank (SBI), Bank of Baroda (BoB), Union Bank, Canara Bank aur sabhi gramin banko ka paisa angutha lagakar nikala aur check kiya jata hai.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Mujhe kaam karwane ke liye cafe aana padega ya online ho jayega? <span>+</span></div>
+        <div class="faq-answer">Zyadatar kaam jaise PAN Card, PF Claim, Ration Card, Admit Card aur Form Filling aap ghar baithe WhatsApp par documents bhejkar karwa sakte hain. Biometric fingerprint wale kaamo ke liye aap lounge par visit kar sakte hain.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">PVC Smart Card kitni der me ready hota hai? <span>+</span></div>
+        <div class="faq-answer">Agar aapke paas PDF available hai to cafe aane ke sirf 5 se 10 minute ke andar high-grade PVC Smart Card print ho kar haath me mil jata hai.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       📍 ULTRA LUXURY GOOGLE MAPS & PHYSICAL STORE ADDRESS (AT THE BOTTOM)
+       ========================================================================== -->
+  <section class="bottom-location-section wrap" id="location">
+    <div class="mega-address-card">
+      <div class="address-info-box">
+        <div>
+          <div class="address-hero-badge">📍 Verified Physical Hub</div>
+          <h2 class="address-title">AKMAL CSC & <span>PNB CSP Lounge</span></h2>
+          <p style="color:var(--text-muted); font-size:13px; margin-top:5px;">
+            Aap center par aakar amne-samne banking aur digital sevaon ka anubhav le sakte hain.
+          </p>
+        </div>
+
+        <!-- Full Landmark & Address Detail -->
+        <div class="detail-block">
+          <div class="detail-icon">🏪</div>
+          <div class="detail-content">
+            <h4>Mukhy Pata (Exact Address)</h4>
+            <p id="storeAddressText">
+              <b>AKMAL CSC & Punjab National Bank CSP Lounge</b><br>
+              Shop No. 04, Main Market Road, Near City Center & State Bank,<br>
+              Landmark: Opposite Old Clock Tower / Municipal Gate,<br>
+              Pin Code: <b>244001</b>, India.
+            </p>
+          </div>
+        </div>
+
+        <!-- Store Timings Block -->
+        <div class="detail-block">
+          <div class="detail-icon">⏰</div>
+          <div class="detail-content" style="width: 100%;">
+            <h4>Dukan Khulne Ka Samay (Live Schedule)</h4>
+            <table class="timings-mini-table">
+              <tr>
+                <td>Subah Ka Samay (Morning):</td>
+                <td>09:00 AM – 01:00 PM</td>
+              </tr>
+              <tr>
+                <td>🍱 Dopahar Lunch Break:</td>
+                <td style="color:var(--gold-primary);">01:00 PM – 02:00 PM</td>
+              </tr>
+              <tr>
+                <td>Sham Ka Samay (Evening):</td>
+                <td>02:00 PM – 09:00 PM</td>
+              </tr>
+              <tr>
+                <td>Sunday (Ravivar):</td>
+                <td style="color:var(--green-emerald);">10:00 AM – 05:00 PM (Active)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Direct Action Buttons -->
+        <div class="action-buttons-grid">
+          <a class="action-btn-maps" id="mapsRouteBtn" href="https://maps.google.com/?q=CSC+Center+Digital+Seva" target="_blank">
+            🗺️ Google Maps Directions
+          </a>
+          <a class="action-btn-call" id="callStoreBtn" href="tel:+917479470293">
+            📞 Direct Call: +91 7479470293
+          </a>
+        </div>
+      </div>
+
+      <!-- Map Embed Container -->
+      <div class="map-visual-container">
+        <div class="map-live-tag">
+          <span class="map-live-dot"></span>
+          <span>Verified GPS Location</span>
+        </div>
+        <iframe 
+          title="AKMAL CSC Google Maps"
+          src="https://maps.google.com/maps?q=Digital%20Seva%20Kendra&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer with Discrete Admin Terminal -->
+<footer>
+  <div class="wrap">
+    <p>© <span id="year"></span> <b>AKMAL CSC & PNB CSP Lounge</b>. All Rights Reserved.</p>
+    <p style="margin-top:6px; font-size:12px; color:var(--text-muted);">
+      Authorized Punjab National Bank BC Channel • Digital India Seva Kendra
+    </p>
+    <p style="margin-top:8px; font-size:11.5px; color:var(--text-dim);" id="footerContactText">
+      Address: Main Market Road, Near City Center • Helpline: +91 7479470293
+    </p>
+
+    <!-- Discrete Bottom Master Admin Launcher -->
+    <div style="margin-top:18px;">
+      <button class="admin-trigger-tag" onclick="openAdminAuthModal()">
+        <span>⚡ Akmal Cloud Admin Master Terminal (Control Panel)</span>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Instant WhatsApp & Call Button -->
+<div class="fab-container">
+  <a class="fab-btn fab-call" id="fabCallBtn" href="tel:+917479470293">
+    <span>📞 Call Cafe</span>
+  </a>
+  <a class="fab-btn fab-wa" id="fabWaBtn" href="https://wa.me/917479470293?text=Namaste%20Akmal%20Bhai,%20mujhe%20apne%20kaam%20ke%20liye%20baat%20karni%20hai." target="_blank">
+    <span>💬 WhatsApp</span>
+  </a>
+</div>
+
+<!-- ==========================================================================
+     🛡️ MASTER ADMIN PANEL MODALS (FULL CONTROL HUB)
+     ========================================================================== -->
+<!-- Admin Auth Modal -->
+<div id="adminAuthModal" class="admin-modal-overlay">
+  <div class="admin-auth-card">
+    <button class="close-modal-btn" style="position:absolute; top:14px; right:14px;" onclick="closeAdminAuthModal()">✕</button>
+    <div style="font-size:32px; margin-bottom:6px;">🔐</div>
+    <h3 style="font-family:var(--font-heading); font-size:18px; color:#fff;">Akmal CSC & PNB Admin</h3>
+    <p style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">Direct Realtime Terminal Access</p>
+    
+    <input type="password" id="adminPassInput" placeholder="Master Access PIN (akmal@786)" style="width:100%; padding:11px; background:rgba(0,0,0,0.7); border:1px solid var(--cyan-neon); border-radius:10px; color:#fff; text-align:center; font-size:15px; letter-spacing:2px; margin-bottom:14px; outline:none;">
+    
+    <button class="btn btn-primary" style="width:100%; justify-content:center;" onclick="verifyAdminAccess()">Unlock Terminal ⚡</button>
+  </div>
+</div>
+
+<!-- Admin Panel Full Control Hub -->
+<div id="adminPanelModal" class="admin-modal-overlay">
+  <div class="admin-panel-card">
+    <div class="admin-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span style="font-size:22px;">👑</span>
+        <div>
+          <h2 style="font-family:var(--font-heading); font-size:16px; font-weight:900; color:#fff;">Master Command Lounge</h2>
+          <p style="font-size:10.5px; color:var(--green-emerald);">● Live Realtime Sync Active</p>
+        </div>
+      </div>
+      <button class="close-modal-btn" onclick="closeAdminPanelModal()">✕</button>
+    </div>
+
+    <div class="admin-tabs">
+      <button class="admin-tab-btn active" onclick="switchAdminTab('services')">🧰 Services Control (<span id="admServiceCount">0</span>)</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('store')">🏪 Store Hours & Status</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('pnb')">🏛️ PNB CSP & Cafe Info</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('ticker')">📢 Live Marquee Ticker</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('reviews')">⭐ Review Moderation</button>
+    </div>
+
+    <div class="admin-body">
+      <!-- 1. Services Manager -->
+      <div id="admTab_services">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+          <div>
+            <h3 style="font-size:14px; color:var(--gold-primary);">Master Services Editor (PNB + CSC)</h3>
+            <p style="font-size:11px; color:var(--text-muted);">Yahan se aap kisi bhi service ko edit ya nayi service add kar sakte hain.</p>
+          </div>
+          <button class="btn btn-primary" style="padding:6px 14px; font-size:11px;" onclick="openAddNewServiceModal()">➕ Nayi Service Add Karein</button>
+        </div>
+        <div id="admServicesMasterList"></div>
+      </div>
+
+      <!-- 2. Store Status & Hours Override -->
+      <div id="admTab_store" style="display:none;">
+        <h3 style="font-size:14px; margin-bottom:10px; color:var(--gold-primary);">Store Status Override</h3>
+        <div class="admin-grid-2">
+          <div class="admin-field-box">
+            <label>Master Force Status</label>
+            <select id="admForceStatus" onchange="saveAdminStoreState()">
+              <option value="AUTO">Automatic (By 09AM-09PM Clock)</option>
+              <option value="FORCE_OPEN">Force OPEN (Dukan Khuli Hai)</option>
+              <option value="FORCE_LUNCH">Force LUNCH BREAK</option>
+              <option value="FORCE_CLOSED">Force CLOSED (Dukan Band Hai)</option>
+            </select>
+          </div>
+          <div class="admin-field-box">
+            <label>Custom Closure Notice (Optional)</label>
+            <input type="text" id="admCustomNotice" placeholder="Notice text if closed..." onchange="saveAdminStoreState()">
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. PNB CSP & Cafe Info -->
+      <div id="admTab_pnb" style="display:none;">
+        <h3 style="font-size:14px; margin-bottom:10px; color:var(--gold-primary);">Cafe & PNB Details Control</h3>
+        <div class="admin-grid-2">
+          <div class="admin-field-box">
+            <label>WhatsApp Number (With 91)</label>
+            <input type="text" id="admConfWhatsApp">
+          </div>
+          <div class="admin-field-box">
+            <label>Calling Number</label>
+            <input type="text" id="admConfCall">
+          </div>
+          <div class="admin-field-box">
+            <label>Owner Name / Brand</label>
+            <input type="text" id="admConfOwnerName">
+          </div>
+          <div class="admin-field-box">
+            <label>Owner Designation Label</label>
+            <input type="text" id="admConfOwnerDesig">
+          </div>
+          <div class="admin-field-box" style="grid-column:span 2;">
+            <label>Full Address & Landmark</label>
+            <textarea id="admConfAddress" rows="2"></textarea>
+          </div>
+        </div>
+        <button class="btn btn-primary" style="margin-top:14px; width:100%; justify-content:center;" onclick="saveMasterCafeConfig()">💾 Save Details Realtime</button>
+      </div>
+
+      <!-- 4. Live Marquee Ticker -->
+      <div id="admTab_ticker" style="display:none;">
+        <h3 style="font-size:14px; margin-bottom:10px; color:var(--gold-primary);">Live Running Ticker Alerts</h3>
+        <div class="admin-field-box" style="margin-bottom:12px;">
+          <label>Add New Notice to Running Ticker</label>
+          <div style="display:flex; gap:8px;">
+            <input type="text" id="admNewTickerText" placeholder="Enter urgent announcement or scheme..." style="flex:1;">
+            <button class="btn btn-primary" onclick="addTickerAlert()">Add Notice</button>
+          </div>
+        </div>
+        <div id="admTickerList" style="display:flex; flex-direction:column; gap:6px;"></div>
+      </div>
+
+      <!-- 5. Review Moderation -->
+      <div id="admTab_reviews" style="display:none;">
+        <h3 style="font-size:14px; margin-bottom:10px; color:var(--gold-primary);">Manage Customer Feedback</h3>
+        <div id="admReviewsList" style="display:flex; flex-direction:column; gap:8px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ==========================================================================
+   ⚙️ 2. CONFIGURATION & STATE INITIALIZATION
+   ========================================================================== */
+let CONFIG = {
+  whatsappNumber: "917479470293",
+  callingNumber: "+917479470293",
+  ownerName: "AKMAL CSC & PNB CSP",
+  ownerDesignation: "Authorized Digital Seva Kendra & Punjab National Bank CSP",
+  adminPin: "akmal@786",
+  address: "Shop No. 04, Main Market Road, Near City Center & State Bank, Landmark: Opposite Old Clock Tower / Municipal Gate, Pin Code: 244001, India.",
+  schedule: { morningOpen: 9, lunchStart: 13, lunchEnd: 14, eveningClose: 21 }
+};
+
+const savedConfig = localStorage.getItem("akmal_site_config");
+if (savedConfig) {
+  try { CONFIG = { ...CONFIG, ...JSON.parse(savedConfig) }; } catch(e){}
+}
+
+/* ==========================================================================
+   🗂️ 3. MASTER 40+ SERVICES DATA (INCLUDING PUNJAB NATIONAL BANK CSP)
+   ========================================================================== */
+const defaultServices = [
+  // 🏛️ PNB CSP SERVICES
+  {
+    id: "pnb_1",
+    logo: "🏛️",
+    name: "PNB Zero-Balance Khata Kholna",
+    cat: "PNB Banking",
+    badge: "Official PNB CSP",
+    desc: "Punjab National Bank me instant savings v Jan-Dhan khata open karein with instant passbook & debit card.",
+    docs: "Aadhaar Card, PAN Card (ya Form 60), 2 Photos",
+    time: "Instant (15 Min)"
+  },
+  {
+    id: "pnb_2",
+    logo: "👆",
+    name: "PNB & All Banks AEPS Cash Nikasi",
+    cat: "PNB Banking",
+    badge: "Aadhaar Pay",
+    desc: "PNB, SBI, BoB, Canara aur sabhi bank khate se angutha lagakar turant cash nikalein aur mini-statement lein.",
+    docs: "Aadhaar Card, Biometric Fingerprint",
+    time: "Instant Cash"
+  },
+  {
+    id: "pnb_3",
+    logo: "💵",
+    name: "Cash Deposit (PNB & Any Bank)",
+    cat: "PNB Banking",
+    badge: "Instant Credit",
+    desc: "Punjab National Bank aur dusre kisi bhi bank account me direct cash deposit karein with official slip.",
+    docs: "Account Number / Bank Passbook",
+    time: "Real-time"
+  },
+  {
+    id: "pnb_4",
+    logo: "📖",
+    name: "PNB Original Passbook Printing",
+    cat: "PNB Banking",
+    badge: "Barcode Kiosk",
+    desc: "PNB physical passbook par computer se bar-code entry aur sabhi purani len-den ki print entry karwayein.",
+    docs: "Original PNB Passbook",
+    time: "Instant 2 Min"
+  },
+  {
+    id: "pnb_5",
+    logo: "🏧",
+    name: "Micro-ATM Card Cash Nikasi",
+    cat: "PNB Banking",
+    badge: "RuPay / Visa / Master",
+    desc: "Kisi bhi bank ke ATM debit card se cash withdrawal karein aur balance enquiry ki slip prapt karein.",
+    docs: "Any Bank ATM Card, PIN",
+    time: "Instant Cash"
+  },
+  {
+    id: "pnb_6",
+    logo: "🛡️",
+    name: "PMJJBY & PMSBY Bima Yojana",
+    cat: "PNB Banking",
+    badge: "Govt Insurance",
+    desc: "PNB account me 2 Lakh rupaye ka Pradhan Mantri Jeevan Jyoti Bima aur Suraksha Bima turant jodein.",
+    docs: "PNB Account Number, Aadhaar",
+    time: "Same Day Policy"
+  },
+  {
+    id: "pnb_7",
+    logo: "👴",
+    name: "Atal Pension Yojana (APY)",
+    cat: "PNB Banking",
+    badge: "Guaranteed Pension",
+    desc: "60 saal ki umar ke baad ₹1000 se ₹5000 tak guaranteed monthly pension aavedan PNB CSP par.",
+    docs: "PNB Bank Account, Aadhaar Card",
+    time: "Instant Registration"
+  },
+  {
+    id: "pnb_8",
+    logo: "💸",
+    name: "Money Transfer (IMPS / NEFT)",
+    cat: "PNB Banking",
+    badge: "24x7 Fast Transfer",
+    desc: "Bharat ke kisi bhi bank me turant paisa bhejein 100% surakshit PNB banking channel se.",
+    docs: "Beneficiary Account No, IFSC Code",
+    time: "Instant Receipt"
+  },
+  {
+    id: "pnb_9",
+    logo: "🔗",
+    name: "Aadhaar & DBT Seeding in PNB",
+    cat: "PNB Banking",
+    badge: "Subsidy Link",
+    desc: "PM-Kisan, Gas subsidy aur sarkari paisa prapt karne ke liye PNB account me DBT active karein.",
+    docs: "Aadhaar Card, PNB Passbook",
+    time: "24 Hours Sync"
+  },
+  
+  // 🆔 ID & SARKARI DOCUMENTS
+  {
+    id: "s1",
+    logo: "🪪",
+    name: "Aadhaar Card Seva & Print",
+    cat: "ID & Documents",
+    badge: "UIDAI Official",
+    desc: "Aadhaar download, address change, biometric status check aur color PVC card reprint.",
+    docs: "Aadhaar Number / Enrollment Slip, Linked Mobile OTP",
+    time: "Instant (10 Min)"
+  },
+  {
+    id: "s2",
+    logo: "🧾",
+    name: "PAN Card (New & Correction)",
+    cat: "ID & Documents",
+    badge: "NSDL / UTIITSL",
+    desc: "Naya physical PAN card banwayein ya naam, pita ka naam aur janam tithi me sudhar karein.",
+    docs: "Aadhaar Card, 2 Passport Photos, Live Signature",
+    time: "2 Hours (e-PAN) / Physical 7 Days"
+  },
+  {
+    id: "s3",
+    logo: "💼",
+    name: "PF / EPFO Claim & Withdrawal",
+    cat: "Financial",
+    badge: "EPFO Verified",
+    desc: "PF ka pura paisa nikalein (Form 19), advance PF (Form 31), pension withdrawal aur KYC update.",
+    docs: "UAN Number, Password, Bank Passbook / Cheque Copy",
+    time: "Same Day Submission"
+  },
+  {
+    id: "s4",
+    logo: "🏥",
+    name: "Ayushman Golden Card",
+    cat: "Government",
+    badge: "PM-JAY Scheme",
+    desc: "5 Lakh rupaye tak muft sarkari v private ilaj ke liye official Ayushman Card apply aur HD PVC print.",
+    docs: "Ration Card (Patra Grihasti), Aadhaar Card",
+    time: "15 se 30 Minute"
+  },
+  {
+    id: "s5",
+    logo: "🌾",
+    name: "PM-Kisan Samman Nidhi",
+    cat: "Government",
+    badge: "Direct DBT",
+    desc: "Kisan 2000 kist status check, biometrics e-KYC, land seeding aur naya kisan registration.",
+    docs: "Khatoni (Zameen Nakal), Aadhaar Card, Bank Passbook",
+    time: "Instant Biometric Sync"
+  },
+  {
+    id: "s6",
+    logo: "🍞",
+    name: "Ration Card Online Seva",
+    cat: "Government",
+    badge: "NFSA Portal",
+    desc: "Naya ration card aavedan, naye bachhe ya patni ka naam jodna, unit transfer aur ration slip print.",
+    docs: "Parivar ke sabhi sadasyo ke Aadhaar, Bank Passbook, Photo",
+    time: "1 - 2 Din"
+  },
+  {
+    id: "s7",
+    logo: "🏠",
+    name: "Income Certificate (Aay Praman Patra)",
+    cat: "Certificates",
+    badge: "e-District Authorized",
+    desc: "Sarkari school, college scholarship v yojanaon ke liye digital hastaksharit aay praman patra.",
+    docs: "Aadhaar Card, Swapr प्रमाणित Ghoshna Patra, Photo",
+    time: "3 se 5 Working Days"
+  },
+  {
+    id: "s8",
+    logo: "📜",
+    name: "Caste Certificate (Jati Praman Patra)",
+    cat: "Certificates",
+    badge: "Tehsil Verified",
+    desc: "OBC, SC, ST jati praman patra online apply, tehsil verification aur digital download.",
+    docs: "Aadhaar Card, Parivar Register Nakal, Purana Praman Patra",
+    time: "3 se 7 Working Days"
+  },
+  {
+    id: "s9",
+    logo: "🏡",
+    name: "Residence Certificate (Niwas Praman)",
+    cat: "Certificates",
+    badge: "Govt Certified",
+    desc: "Mool Niwas Praman Patra apply karein jo sabhi bhartiyo aur yojanaon ke liye aavashyak hai.",
+    docs: "Aadhaar Card, Bijli Bill ya Ration Card, Photo",
+    time: "3 se 5 Working Days"
+  },
+  {
+    id: "s10",
+    logo: "👵",
+    name: "Pension Yojnayein (SSPY Portal)",
+    cat: "Government",
+    badge: "Social Welfare",
+    desc: "Vridha Pension (Old Age), Vidhwa Pension, aur Divyang (Viklang) pension online registration.",
+    docs: "Aadhaar Card, Aay Praman Patra, Bank Khata, Passport Photo",
+    time: "Same Day Submission"
+  },
+  {
+    id: "s11",
+    logo: "🗳️",
+    name: "Voter ID Card (Pahchan Patra)",
+    cat: "ID & Documents",
+    badge: "ECI Verified",
+    desc: "Naya voter card apply karein, correction karein, ya photo wala naya voter slip download karein.",
+    docs: "Aadhaar Card, Janam Tithi Proof, Passport Photo",
+    time: "Instant Download / By Post"
+  },
+  {
+    id: "s12",
+    logo: "🚗",
+    name: "Driving Licence (Sarathi Portal)",
+    cat: "ID & Documents",
+    badge: "MoRTH Sarathi",
+    desc: "Learner Licence apply, DL online test slot booking, permanent renewal aur duplicate DL print.",
+    docs: "Aadhaar Card, 10th Marksheet, Blood Group Info, Photo",
+    time: "Slot Par Nirbhar"
+  },
+  {
+    id: "s13",
+    logo: "🛂",
+    name: "Passport Seva Kendra Booking",
+    cat: "ID & Documents",
+    badge: "Ministry of External",
+    desc: "Fresh tatkaal aur normal passport registration, appointment date slot booking aur guidance.",
+    docs: "10th Marksheet, Aadhaar Card, PAN Card, Bank Passbook",
+    time: "Instant Appointment Slip"
+  },
+  {
+    id: "s14",
+    logo: "👷",
+    name: "Labour (Shramik) Card",
+    cat: "Government",
+    badge: "BOCW Portal",
+    desc: "Majdoor card naya registration, shramik card renewal aur kisan majdoor bhatta labh apply.",
+    docs: "Aadhaar Card, Ration Card, Bank Passbook, Photo",
+    time: "Same Day Online"
+  },
+  {
+    id: "s15",
+    logo: "💳",
+    name: "e-Shram Card Registration",
+    cat: "Government",
+    badge: "NDUW Central",
+    desc: "Asangathit kshetra ke workers ke liye UAN e-Shram card download aur profile update.",
+    docs: "Aadhaar Card, Mobile Number, Bank Details",
+    time: "Instant (10 Min)"
+  },
+  {
+    id: "s16",
+    logo: "🎂",
+    name: "Birth Certificate (Janam Praman)",
+    cat: "Certificates",
+    badge: "CRS Civil Registry",
+    desc: "Naye bache ya bado ka janam praman patra CRS portal par verify aur registration sahayata.",
+    docs: "Hospital Discharge Slip, Mata-Pita ke Aadhaar, Affidavit",
+    time: "7 se 15 Working Days"
+  },
+  {
+    id: "s17",
+    logo: "⚰️",
+    name: "Death Certificate (Mrityu Praman)",
+    cat: "Certificates",
+    badge: "Official Record",
+    desc: "Mrityu praman patra registration aur official verified certificate download.",
+    docs: "Hospital Slip / Shamshan Ghat Slip, Aavedak ka Aadhaar",
+    time: "7 se 15 Working Days"
+  },
+  {
+    id: "s18",
+    logo: "🎓",
+    name: "UP & National Scholarship",
+    cat: "Education",
+    badge: "Scholarship Portal",
+    desc: "Pre-matric aur post-matric scholarship registration, renewal, correction aur final printout.",
+    docs: "Previous Marksheets, Fee Receipt, Aay/Jati/Niwas, Bank Khata",
+    time: "Same Day Final Submission"
+  },
+  {
+    id: "s19",
+    logo: "💼",
+    name: "Govt Job Online Forms",
+    cat: "Education",
+    badge: "SSC / Police / All",
+    desc: "SSC, Railway, Army, Police, Teaching aur sabhi state v central bharti forms bina kisi truti ke.",
+    docs: "All Educational Marksheets, Photo, Signature, Aadhaar",
+    time: "15 se 30 Minute"
+  },
+  {
+    id: "s20",
+    logo: "📝",
+    name: "Admit Card & Result Download",
+    cat: "Education",
+    badge: "Instant Laser Print",
+    desc: "Sabhi sarkari exam admit card, answer key, merit list aur marksheet verification color print.",
+    docs: "Registration No / Roll Number, Janam Tithi",
+    time: "Instant 2 Minute"
+  },
+  {
+    id: "s21",
+    logo: "🪪",
+    name: "Ultra-HD Smart PVC Card Printing",
+    cat: "Cyber Lounge",
+    badge: "ATM Quality Plastic",
+    desc: "Aadhaar, PAN, Voter, Ayushman, Driving Licence ko waterproof ATM plastic card par print karein.",
+    docs: "Card Number / PDF File",
+    time: "5 Minute Live"
+  },
+  {
+    id: "s22",
+    logo: "📸",
+    name: "Passport Size Urgent Photo",
+    cat: "Cyber Lounge",
+    badge: "Studio Quality",
+    desc: "High-grade photo sheet par 8/16/32 photos, background change (White/Blue) ke sath turant.",
+    docs: "Live Photo / Selfie on WhatsApp",
+    time: "5 Minute"
+  },
+  {
+    id: "s23",
+    logo: "🖨️",
+    name: "High Speed Xerox & Document Print",
+    cat: "Cyber Lounge",
+    badge: "Sharp HD Print",
+    desc: "Black & White aur Color photostate, legal stamp paper print, spiral binding aur hard lamination.",
+    docs: "Original Document / WhatsApp PDF",
+    time: "Instant"
+  },
+  {
+    id: "s24",
+    logo: "📑",
+    name: "PDF Merge, Scan & Format",
+    cat: "Cyber Lounge",
+    badge: "Digital Utility",
+    desc: "Multiple documents ko 1 PDF me convert karna, size compress karna (200KB limit), aur scan.",
+    docs: "Hardcopy ya Softcopy",
+    time: "Instant"
+  },
+  {
+    id: "s25",
+    logo: "⌨️",
+    name: "Hindi & English Fast Typing",
+    cat: "Cyber Lounge",
+    badge: "Court & Legal",
+    desc: "Kachehri ke shapat patra (Affidavit), agreement, school project aur aavedan patra typing.",
+    docs: "Draft Copy / Audio Note",
+    time: "15 Minute"
+  },
+  {
+    id: "s26",
+    logo: "💡",
+    name: "Electricity & Utility Bills",
+    cat: "Financial",
+    badge: "BBPS Connected",
+    desc: "Bijli bill jama karein aur instant official receipt prapt karein, water bill v gas booking.",
+    docs: "Consumer Account ID / Bill Copy",
+    time: "Instant Slip"
+  },
+  {
+    id: "s27",
+    logo: "🏷️",
+    name: "FASTag Buy & Quick Recharge",
+    cat: "Travel",
+    badge: "NHAI / NETC",
+    desc: "Car, truck, commercial vehicle ke liye naya FASTag instant activation aur recharge support.",
+    docs: "Vehicle RC Copy, Aadhaar Card",
+    time: "10 Minute"
+  },
+  {
+    id: "s28",
+    logo: "🚆",
+    name: "Train Ticket Booking (IRCTC)",
+    cat: "Travel",
+    badge: "IRCTC Agent",
+    desc: "Tatkaal v general confirmed train reservation sahayata, PNR status check aur cancellation.",
+    docs: "Yatriyo ke Naam, Umar, Yatra Ki Tithi",
+    time: "Real-time Booking"
+  },
+  {
+    id: "s29",
+    logo: "✈️",
+    name: "Flight Ticket Booking",
+    cat: "Travel",
+    badge: "Lowest Fare",
+    desc: "Domestic v international flight tickets par sabse saste offers aur instant ticket printout.",
+    docs: "Passenger Name, Govt ID Proof, Travel Dates",
+    time: "Instant Ticket"
+  },
+  {
+    id: "s30",
+    logo: "🏢",
+    name: "MSME Udyam Registration",
+    cat: "Government",
+    badge: "Govt Business ID",
+    desc: "Chhote-bade vyapariyo ke liye sarkari Udyam Certificate registration aur business verification.",
+    docs: "Aadhaar, PAN Card, Vyapar Ka Naam, Bank Details",
+    time: "24 Hours"
+  },
+  {
+    id: "s31",
+    logo: "👮",
+    name: "Police Character Certificate (PCC)",
+    cat: "Certificates",
+    badge: "CCTNS Portal",
+    desc: "Charitra Praman Patra (Police Verification) aavedan sarkari naukri v private job ke liye.",
+    docs: "Aadhaar Card, Passport Photo, Local Reference Info",
+    time: "7 se 14 Din"
+  }
+];
+
+let services = JSON.parse(localStorage.getItem("akmal_services_data") || JSON.stringify(defaultServices));
+let tickerAlerts = JSON.parse(localStorage.getItem("akmal_ticker_alerts") || JSON.stringify([
+  "🏛️ Punjab National Bank naye zero-balance khate aur passbook printing live shuru hai.",
+  "💳 Kisi bhi bank ke khate se angutha lagakar turant paise nikalein aur balance check karein.",
+  "⚡ Ayushman Bharat 5 Lakh Muft Ilaj Card e-KYC shuru hai.",
+  "🪪 ATM jaisa waterproof Smart PVC Plastic Aadhaar & PAN Card sirf 5 minute me.",
+  "💼 PF Advance & Full Claim Withdrawal settlement online aavedan uplabdh."
+]));
+let customerReviews = JSON.parse(localStorage.getItem("akmal_reviews_data") || JSON.stringify([
+  { name: "Mohammad Zaid", loc: "Main Market Road", stars: 5, text: "PNB Khata sirf 15 minute me khul gaya aur passbook bhi turant haath me mil gayi. Zabardast seva!" },
+  { name: "Rahul Verma", loc: "City Station Road", stars: 5, text: "Smart PVC Aadhaar Card ki quality bilkul debit card jaisi solid hai. Bheed me khada hone se bach gaya." },
+  { name: "Shahid Ali", loc: "Civil Lines Area", stars: 5, text: "SBI account ka paisa bina kisi dikkat ke angutha lagakar nikal gaya. PNB CSP se bahut suvidha ho gayi hai." }
+]));
+
+/* ==========================================================================
+   🍞 TOAST NOTIFIER
+   ========================================================================== */
+function showToast(msg, icon="✨") {
+  const container = document.getElementById("toast-container");
+  const toast = document.createElement("div");
+  toast.className = "ios-toast";
+  toast.innerHTML = `<span>${icon}</span> <span>${msg}</span>`;
+  container.appendChild(toast);
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    toast.style.transform = "translateY(-10px)";
+    toast.style.transition = "0.3s";
+    setTimeout(() => toast.remove(), 300);
+  }, 3200);
+}
+
+/* ==========================================================================
+   🧰 RENDERING CONTROLLERS (FIXED SCROLL & CATEGORY BUG)
+   ========================================================================== */
+const servicesContainer = document.getElementById("servicesContainer");
+const searchInput = document.getElementById("search");
+const catsContainer = document.getElementById("cats");
+
+const categories = ["All", "PNB Banking", "ID & Documents", "Government", "Certificates", "Education", "Cyber Lounge", "Financial", "Travel"];
+let activeCategory = "All";
+
+// Category Filter Generator
+function setupCategories() {
+  catsContainer.innerHTML = "";
+  categories.forEach(cat => {
+    const chip = document.createElement("button");
+    const isPnb = cat === "PNB Banking";
+    chip.className = "cat-chip" + (isPnb ? " pnb-chip" : "") + (cat === activeCategory ? " active" : "");
+    chip.innerHTML = (isPnb ? "🏛️ " : "") + cat;
+    chip.onclick = () => {
+      activeCategory = cat;
+      document.querySelectorAll(".cat-chip").forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+      renderServices();
+    };
+    catsContainer.appendChild(chip);
+  });
+}
+setupCategories();
+
+// 100% Reliable Render Services Function
+function renderServices() {
+  const query = (searchInput.value || "").toLowerCase().trim();
+  servicesContainer.innerHTML = "";
+
+  const filtered = services.filter(item => {
+    const matchCat = (activeCategory === "All") || (item.cat === activeCategory);
+    const matchQuery = (item.name + " " + item.cat + " " + item.desc + " " + item.docs).toLowerCase().includes(query);
+    return matchCat && matchQuery;
+  });
+
+  if (filtered.length === 0) {
+    servicesContainer.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 45px 20px; color: var(--text-muted);">
+        <p style="font-size: 16px; font-weight: 700; color: #fff;">Koi matching service nahi mili.</p>
+        <p style="font-size: 13px; margin-top: 6px;">Aap direct WhatsApp par pooch sakte hain, sabhi banking aur online kaam kiye jaate hain.</p>
+      </div>`;
+    return;
+  }
+
+  filtered.forEach((s) => {
+    const card = document.createElement("div");
+    const isPnb = s.cat === "PNB Banking";
+    card.className = "service-card" + (isPnb ? " pnb-bank-card" : "");
+    
+    const waUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(`Namaste Akmal CSC, mujhe *${s.name}* karwana hai. Kripya process batayein.`)}`;
+
+    card.innerHTML = `
+      <div>
+        <div class="card-header-bar">
+          <div class="service-logo-wrap">${s.logo || '⚡'}</div>
+          <div class="service-badges">
+            <span class="badge-category" ${isPnb ? 'style="background:rgba(255,193,7,0.15); color:#FFC107; border-color:#FFC107;"' : ''}>${s.cat}</span>
+            <span class="badge-verified">✓ ${s.badge}</span>
+          </div>
+        </div>
+        
+        <h3>${s.name}</h3>
+        <p class="service-desc">${s.desc}</p>
+
+        <div class="service-meta-box">
+          <div class="meta-row">
+            <span class="meta-label">📋 Zaroori:</span>
+            <span class="meta-val">${s.docs}</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">⏱️ Samay:</span>
+            <span class="meta-val" style="color:var(--cyan-neon); font-weight:700;">${s.time}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card-footer">
+        <a class="btn-card-inquire" href="${waUrl}" target="_blank">
+          <span>💬 WhatsApp Par Jankari Lein</span>
+        </a>
+      </div>
+    `;
+    servicesContainer.appendChild(card);
+  });
+
+  document.getElementById("statServicesNum").textContent = services.length + "+";
+}
+
+searchInput.addEventListener("input", renderServices);
+renderServices();
+
+// Ticker Live Render
+function renderTicker() {
+  const container = document.getElementById("liveTickerContent");
+  container.innerHTML = tickerAlerts.map(t => {
+    const isPnb = t.toLowerCase().includes("pnb") || t.toLowerCase().includes("bank");
+    return `<div class="ticker-item"><span class="ticker-tag ${isPnb ? 'pnb' : ''}">${isPnb ? 'PNB BANKING' : 'ALERT'}</span> ${t}</div>`;
+  }).join("");
+}
+renderTicker();
+
+// Public Reviews Render
+function renderPublicReviews() {
+  const container = document.getElementById("publicReviewsContainer");
+  container.innerHTML = customerReviews.map(r => `
+    <div class="review-card">
+      <div class="review-header">
+        <div>
+          <div class="review-author">${r.name}</div>
+          <div class="review-loc">📍 ${r.loc}</div>
+        </div>
+        <div class="review-stars">${"★".repeat(r.stars)}</div>
+      </div>
+      <div class="review-text">"${r.text}"</div>
+    </div>
+  `).join("");
+}
+renderPublicReviews();
+
+// Apply Config to DOM
+function applyConfig() {
+  document.getElementById("ownerNameDisplay").innerHTML = `${CONFIG.ownerName} <span class="verified-icon">✓</span>`;
+  document.getElementById("ownerDesigDisplay").textContent = CONFIG.ownerDesignation;
+  document.getElementById("storeAddressText").innerHTML = `<b>${CONFIG.ownerName}</b><br>${CONFIG.address}`;
+  document.getElementById("callStoreBtn").href = `tel:${CONFIG.callingNumber}`;
+  document.getElementById("callStoreBtn").innerHTML = `📞 Direct Call: ${CONFIG.callingNumber}`;
+  document.getElementById("fabCallBtn").href = `tel:${CONFIG.callingNumber}`;
+  document.getElementById("footerContactText").textContent = `Address: ${CONFIG.address} • Helpline: ${CONFIG.callingNumber}`;
+  
+  const waLink = `https://wa.me/${CONFIG.whatsappNumber}?text=Namaste%20Akmal%20Bhai,%20mujhe%20apne%20kaam%20ke%20liye%20baat%20karni%20hai.`;
+  document.getElementById("mainWaBtn").href = waLink;
+  document.getElementById("fabWaBtn").href = waLink;
+}
+applyConfig();
+
+/* ==========================================================================
+   ⏰ STORE SCHEDULE LOGIC
+   ========================================================================== */
+let adminStoreOverride = localStorage.getItem("akmal_store_override") || "AUTO";
+let adminStoreNotice = localStorage.getItem("akmal_store_notice") || "";
+
+function checkStoreStatus() {
+  const now = new Date();
+  const hour = now.getHours();
+  const pill = document.getElementById("liveStatusPill");
+  const text = document.getElementById("liveStatusText");
+
+  if (adminStoreOverride === "FORCE_OPEN") {
+    pill.className = "status-pill";
+    text.textContent = "OPEN NOW (Admin)";
+    return;
+  }
+  if (adminStoreOverride === "FORCE_LUNCH") {
+    pill.className = "status-pill break";
+    text.textContent = "LUNCH BREAK";
+    return;
+  }
+  if (adminStoreOverride === "FORCE_CLOSED") {
+    pill.className = "status-pill closed";
+    text.textContent = "CLOSED (Notice)";
+    return;
+  }
+
+  // Automatic Clock Mode
+  if (hour >= CONFIG.schedule.morningOpen && hour < CONFIG.schedule.lunchStart) {
+    pill.className = "status-pill";
+    text.textContent = "OPEN NOW (Morning)";
+  } else if (hour >= CONFIG.schedule.lunchStart && hour < CONFIG.schedule.lunchEnd) {
+    pill.className = "status-pill break";
+    text.textContent = "LUNCH BREAK (Till 2 PM)";
+  } else if (hour >= CONFIG.schedule.lunchEnd && hour < CONFIG.schedule.eveningClose) {
+    pill.className = "status-pill";
+    text.textContent = "OPEN NOW (Evening)";
+  } else {
+    pill.className = "status-pill closed";
+    text.textContent = "CLOSED (Opens 9 AM)";
+  }
+}
+checkStoreStatus();
+setInterval(checkStoreStatus, 20000);
+
+// FAQ
+document.querySelectorAll(".faq-question").forEach(q => {
+  q.addEventListener("click", () => q.parentElement.classList.toggle("active"));
+});
+
+// Scroll Progress Tracker
+window.addEventListener("scroll", () => {
+  const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("scroll-progress").style.width = scrolled + "%";
+});
+
+// Ambient Canvas Particles
+const canvas = document.getElementById("particle-canvas");
+const ctx = canvas.getContext("2d");
+let particles = [];
+function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+class Particle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 2 + 0.6;
+    this.speedX = Math.random() * 0.4 - 0.2;
+    this.speedY = Math.random() * 0.4 - 0.2;
+    this.opacity = Math.random() * 0.4 + 0.15;
+  }
+  update() {
+    this.x += this.speedX; this.y += this.speedY;
+    if (this.x > canvas.width) this.x = 0; if (this.x < 0) this.x = canvas.width;
+    if (this.y > canvas.height) this.y = 0; if (this.y < 0) this.y = canvas.height;
+  }
+  draw() {
+    ctx.fillStyle = `rgba(0, 242, 254, ${this.opacity})`;
+    ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();
+  }
+}
+for (let i = 0; i < 28; i++) particles.push(new Particle());
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => { p.update(); p.draw(); });
+  requestAnimationFrame(animateParticles);
+}
+animateParticles();
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* ==========================================================================
+   🛡️ MASTER ADMIN PANEL FULL CRUD & CONFIG LOGIC
+   ========================================================================== */
+function openAdminAuthModal() {
+  document.getElementById("adminAuthModal").classList.add("active");
+  document.getElementById("adminPassInput").value = "";
+  document.getElementById("adminPassInput").focus();
+}
+function closeAdminAuthModal() {
+  document.getElementById("adminAuthModal").classList.remove("active");
+}
+function verifyAdminAccess() {
+  const entered = document.getElementById("adminPassInput").value.trim();
+  if (entered === CONFIG.adminPin) {
+    closeAdminAuthModal();
+    openAdminPanelModal();
+    showToast("Master Cloud Terminal Unlocked", "👑");
+  } else {
+    showToast("Galat Master PIN!", "❌");
+  }
+}
+
+function openAdminPanelModal() {
+  document.getElementById("adminPanelModal").classList.add("active");
+  loadAdminFormValues();
+  renderAdminServicesList();
+  renderAdminTickerList();
+  renderAdminReviewsList();
+}
+function closeAdminPanelModal() {
+  document.getElementById("adminPanelModal").classList.remove("active");
+}
+
+function switchAdminTab(tabId) {
+  document.querySelectorAll(".admin-tab-btn").forEach(b => b.classList.remove("active"));
+  document.querySelectorAll("[id^='admTab_']").forEach(t => t.style.display = "none");
+  event.target.classList.add("active");
+  document.getElementById("admTab_" + tabId).style.display = "block";
+}
+
+function loadAdminFormValues() {
+  document.getElementById("admForceStatus").value = adminStoreOverride;
+  document.getElementById("admCustomNotice").value = adminStoreNotice;
+  document.getElementById("admConfWhatsApp").value = CONFIG.whatsappNumber;
+  document.getElementById("admConfCall").value = CONFIG.callingNumber;
+  document.getElementById("admConfOwnerName").value = CONFIG.ownerName;
+  document.getElementById("admConfOwnerDesig").value = CONFIG.ownerDesignation;
+  document.getElementById("admConfAddress").value = CONFIG.address;
+  document.getElementById("admServiceCount").textContent = services.length;
+}
+
+function saveAdminStoreState() {
+  adminStoreOverride = document.getElementById("admForceStatus").value;
+  adminStoreNotice = document.getElementById("admCustomNotice").value.trim();
+  localStorage.setItem("akmal_store_override", adminStoreOverride);
+  localStorage.setItem("akmal_store_notice", adminStoreNotice);
+  checkStoreStatus();
+  showToast("Store Status Updated Realtime!", "🏪");
+}
+
+function saveMasterCafeConfig() {
+  CONFIG.whatsappNumber = document.getElementById("admConfWhatsApp").value.trim();
+  CONFIG.callingNumber = document.getElementById("admConfCall").value.trim();
+  CONFIG.ownerName = document.getElementById("admConfOwnerName").value.trim();
+  CONFIG.ownerDesignation = document.getElementById("admConfOwnerDesig").value.trim();
+  CONFIG.address = document.getElementById("admConfAddress").value.trim();
+
+  localStorage.setItem("akmal_site_config", JSON.stringify(CONFIG));
+  applyConfig();
+  renderServices();
+  showToast("Cafe & PNB Details Saved!", "💾");
+}
+
+// Admin Services CRUD
+function renderAdminServicesList() {
+  const container = document.getElementById("admServicesMasterList");
+  container.innerHTML = services.map((s, idx) => `
+    <div class="admin-service-row">
+      <div style="font-size:20px;">${s.logo}</div>
+      <div>
+        <b style="color:#fff;">${s.name}</b>
+        <div style="color:var(--text-muted); font-size:10px;">${s.cat} • ${s.badge}</div>
+      </div>
+      <div style="font-size:11px; color:#CBD5E1;">Docs: ${s.docs.substring(0, 22)}...</div>
+      <div style="font-size:11px; color:var(--cyan-neon);">${s.time}</div>
+      <div style="display:flex; gap:4px;">
+        <button class="btn btn-glass" style="padding:4px 8px; font-size:10px; color:var(--pink-neon);" onclick="deleteAdminService(${idx})">🗑️</button>
+      </div>
+    </div>
+  `).join("");
+}
+
+function openAddNewServiceModal() {
+  const name = prompt("Enter Service Name (Jaise: PNB Micro ATM / Naya DL):");
+  if (!name) return;
+  const cat = prompt("Category (PNB Banking / ID & Documents / Government / Certificates / Education / Cyber Lounge):") || "PNB Banking";
+  const badge = prompt("Badge (Jaise: Official PNB CSP / UIDAI Verified):") || "Verified";
+  const desc = prompt("Short Description:") || "Fast official processing service.";
+  const docs = prompt("Required Documents:") || "Aadhaar Card, Mobile OTP";
+  const time = prompt("Processing Time (Jaise: Instant / 24 Hours):") || "Instant";
+  const logo = prompt("Emoji Icon (Jaise: 🏛️ / 🪪 / 💳):") || "⚡";
+
+  services.unshift({
+    id: "custom_" + Date.now(),
+    logo,
+    name: name.trim(),
+    cat: cat.trim(),
+    badge: badge.trim(),
+    desc: desc.trim(),
+    docs: docs.trim(),
+    time: time.trim()
+  });
+
+  localStorage.setItem("akmal_services_data", JSON.stringify(services));
+  renderAdminServicesList();
+  renderServices();
+  document.getElementById("admServiceCount").textContent = services.length;
+  showToast("Nayi Service Live Publish Ho Gayi!", "✨");
+}
+
+function deleteAdminService(idx) {
+  if (confirm(`Kya aap '${services[idx].name}' ko delete karna chahte hain?`)) {
+    services.splice(idx, 1);
+    localStorage.setItem("akmal_services_data", JSON.stringify(services));
+    renderAdminServicesList();
+    renderServices();
+    document.getElementById("admServiceCount").textContent = services.length;
+    showToast("Service Removed", "🗑️");
+  }
+}
+
+// Admin Ticker
+function renderAdminTickerList() {
+  const container = document.getElementById("admTickerList");
+  container.innerHTML = tickerAlerts.map((t, idx) => `
+    <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.5); padding:8px 12px; border-radius:8px; border:1px solid var(--border-light); font-size:12px;">
+      <span>${t}</span>
+      <button class="btn btn-glass" style="padding:3px 8px; font-size:10px; color:var(--pink-neon);" onclick="deleteTickerAlert(${idx})">🗑️</button>
+    </div>
+  `).join("");
+}
+
+function addTickerAlert() {
+  const val = document.getElementById("admNewTickerText").value.trim();
+  if (!val) return;
+  tickerAlerts.unshift(val);
+  localStorage.setItem("akmal_ticker_alerts", JSON.stringify(tickerAlerts));
+  document.getElementById("admNewTickerText").value = "";
+  renderAdminTickerList();
+  renderTicker();
+  showToast("New Notice Added to Running Marquee!", "📢");
+}
+
+function deleteTickerAlert(idx) {
+  tickerAlerts.splice(idx, 1);
+  localStorage.setItem("akmal_ticker_alerts", JSON.stringify(tickerAlerts));
+  renderAdminTickerList();
+  renderTicker();
+  showToast("Notice Deleted", "🗑️");
+}
+
+// Admin Reviews
+function renderAdminReviewsList() {
+  const container = document.getElementById("admReviewsList");
+  container.innerHTML = customerReviews.map((r, idx) => `
+    <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.5); padding:8px 12px; border-radius:8px; border:1px solid var(--border-light); font-size:12px;">
+      <div>
+        <b>${r.name}</b> (${r.loc}) - <span style="color:var(--gold-primary);">${"★".repeat(r.stars)}</span>
+        <p style="color:var(--text-muted); font-size:11px;">"${r.text}"</p>
+      </div>
+      <button class="btn btn-glass" style="padding:3px 8px; font-size:10px; color:var(--pink-neon);" onclick="deleteAdminReview(${idx})">🗑️</button>
+    </div>
+  `).join("");
+}
+
+function deleteAdminReview(idx) {
+  customerReviews.splice(idx, 1);
+  localStorage.setItem("akmal_reviews_data", JSON.stringify(customerReviews));
+  renderAdminReviewsList();
+  renderPublicReviews();
+  showToast("Review Deleted", "🗑️");
+}
+</script>
+
+</body>
+</html>
